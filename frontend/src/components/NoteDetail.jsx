@@ -9,7 +9,7 @@ const NoteDetail = ({ note }) => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.put(
-        `http://localhost:5000/api/notes/${note._id}`,
+        `https://collaborativenotes.onrender.com/api/notes/${note._id}`,
         updatedNote,
         {
           headers: { Authorization: `Bearer ${token}` },

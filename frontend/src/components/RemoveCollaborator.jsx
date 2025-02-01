@@ -11,7 +11,7 @@ const RemoveCollaborator = ({ noteId }) => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5000/api/notes/${noteId}`,
+          `https://collaborativenotes.onrender.com/api/notes/${noteId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -33,7 +33,7 @@ const RemoveCollaborator = ({ noteId }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/api/notes/${noteId}/remove-collaborator`,
+        `https://collaborativenotes.onrender.com/api/notes/${noteId}/remove-collaborator`,
         { userId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

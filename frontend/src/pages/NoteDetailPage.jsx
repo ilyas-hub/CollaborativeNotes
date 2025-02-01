@@ -6,7 +6,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://collaborativenotes.onrender.com");
 
 const NoteDetailPage = () => {
   const { id } = useParams();
@@ -49,7 +49,7 @@ const NoteDetailPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/notes/${id}`,
+        `https://collaborativenotes.onrender.com/api/notes/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -66,7 +66,7 @@ const NoteDetailPage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/notes/${id}`,
+        `https://collaborativenotes.onrender.com/api/notes/${id}`,
         { title, content },
         { headers: { Authorization: `Bearer ${token}` } }
       );

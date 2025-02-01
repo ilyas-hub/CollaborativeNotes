@@ -17,7 +17,7 @@ const ShareNote = ({ noteId }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/api/notes/${noteId}/share`,
+        `https://collaborativenotes.onrender.com/api/notes/${noteId}/share`,
         { identifier },
         { headers: { Authorization: `Bearer ${token}` } }
       );

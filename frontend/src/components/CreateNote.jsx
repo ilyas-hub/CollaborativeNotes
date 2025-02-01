@@ -26,7 +26,7 @@ const CreateNote = ({ fetchNotes }) => {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/api/notes",
+        "https://collaborativenotes.onrender.com/api/notes",
         { title, content },
         {
           headers: {

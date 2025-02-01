@@ -24,7 +24,7 @@ const SearchNotes = ({ setNotes, originalNotes }) => {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/api/notes/search?query=${searchTerm}`,
+        `https://collaborativenotes.onrender.com/api/notes/search?query=${searchTerm}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

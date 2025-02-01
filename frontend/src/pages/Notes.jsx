@@ -12,7 +12,7 @@ const Notes = () => {
   const fetchNotes = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`http://localhost:5000/api/notes`, {
+      const response = await axios.get(`https://collaborativenotes.onrender.com/api/notes`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -31,7 +31,7 @@ const Notes = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/notes/${noteId}`, {
+      await axios.delete(`https://collaborativenotes.onrender.com/api/notes/${noteId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
